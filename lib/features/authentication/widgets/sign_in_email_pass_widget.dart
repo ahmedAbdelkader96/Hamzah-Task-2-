@@ -84,6 +84,7 @@ class _SignInEmailPassWidgetState extends State<SignInEmailPassWidget> {
     await LocalStorageHelper.remove('email');
     await LocalStorageHelper.remove('password');
     await LocalStorageHelper.remove('isAuthWithBiometricEnabledBefore');
+    isAuthWithBiometricEnabledBefore = false;
     setState(() {});
   }
 
