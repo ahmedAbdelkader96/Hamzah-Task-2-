@@ -1,0 +1,140 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter --no-color build apk
+
+## exception
+
+ProcessException: ProcessException: Process exited abnormally with exit code 1:
+
+Welcome to Gradle 7.6.3!
+
+Here are the highlights of this release:
+ - Added support for Java 19.
+ - Introduced `--rerun` flag for individual task rerun.
+ - Improved dependency block for test suites to be strongly typed.
+ - Added a pluggable system for Java toolchains provisioning.
+
+For more details see https://docs.gradle.org/7.6.3/release-notes.html
+
+Starting a Gradle Daemon, 1 incompatible Daemon could not be reused, use --status for details
+
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Directory '/Users/ahmed/Desktop/Hamzah-Task-3-Secure-Authentication-and-User-Management-/android' does not contain a Gradle build.
+
+A Gradle build should contain a 'settings.gradle' or 'settings.gradle.kts' file in its root directory. It may also contain a 'build.gradle' or 'build.gradle.kts' file.
+
+To create a new Gradle build in this directory run 'gradlew init'
+
+For more detail on the 'init' task see https://docs.gradle.org/7.6.3/userguide/build_init_plugin.html
+
+For more detail on creating a Gradle build see https://docs.gradle.org/7.6.3/userguide/tutorial_using_tasks.html
+
+* Try:
+> Run gradlew init to create a new Gradle build in this directory.
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+
+* Get more help at https://help.gradle.org
+
+BUILD FAILED in 3s
+  Command: /Users/ahmed/Desktop/Hamzah-Task-3-Secure-Authentication-and-User-Management-/android/gradlew app:tasks --all --console=auto
+
+```
+#0      RunResult.throwException (package:flutter_tools/src/base/process.dart:127:5)
+#1      _DefaultProcessUtils.run (package:flutter_tools/src/base/process.dart:326:19)
+<asynchronous suspension>
+#2      flavorUndefinedHandler.<anonymous closure> (package:flutter_tools/src/android/gradle_errors.dart:373:38)
+<asynchronous suspension>
+#3      AndroidGradleBuilder.buildGradleApp (package:flutter_tools/src/android/gradle.dart:511:40)
+<asynchronous suspension>
+#4      AndroidGradleBuilder.buildApk (package:flutter_tools/src/android/gradle.dart:224:5)
+<asynchronous suspension>
+#5      BuildApkCommand.runCommand (package:flutter_tools/src/commands/build_apk.dart:142:5)
+<asynchronous suspension>
+#6      FlutterCommand.run.<anonymous closure> (package:flutter_tools/src/runner/flutter_command.dart:1389:27)
+<asynchronous suspension>
+#7      AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:153:19)
+<asynchronous suspension>
+#8      CommandRunner.runCommand (package:args/command_runner.dart:212:13)
+<asynchronous suspension>
+#9      FlutterCommandRunner.runCommand.<anonymous closure> (package:flutter_tools/src/runner/flutter_command_runner.dart:355:9)
+<asynchronous suspension>
+#10     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:153:19)
+<asynchronous suspension>
+#11     FlutterCommandRunner.runCommand (package:flutter_tools/src/runner/flutter_command_runner.dart:295:5)
+<asynchronous suspension>
+#12     run.<anonymous closure>.<anonymous closure> (package:flutter_tools/runner.dart:119:9)
+<asynchronous suspension>
+#13     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:153:19)
+<asynchronous suspension>
+#14     main (package:flutter_tools/executable.dart:90:3)
+<asynchronous suspension>
+```
+
+## flutter doctor
+
+```
+[✓] Flutter (Channel stable, 3.19.5, on macOS 14.4 23E214 darwin-x64, locale en-EG)
+    • Flutter version 3.19.5 on channel stable at /Volumes/Mac New/Users/Downloads/flutter
+    • Upstream repository https://github.com/flutter/flutter.git
+    • Framework revision 300451adae (5 weeks ago), 2024-03-27 21:54:07 -0500
+    • Engine revision e76c956498
+    • Dart version 3.3.3
+    • DevTools version 2.31.1
+
+[✓] Android toolchain - develop for Android devices (Android SDK version 34.0.0)
+    • Android SDK at /Users/ahmed/Library/Android/sdk
+    • Platform android-34, build-tools 34.0.0
+    • Java binary at: /Applications/Android Studio.app/Contents/jbr/Contents/Home/bin/java
+    • Java version OpenJDK Runtime Environment (build 17.0.9+0-17.0.9b1087.7-11185874)
+    • All Android licenses accepted.
+
+[✓] Xcode - develop for iOS and macOS (Xcode 15.3)
+    • Xcode at /Applications/Xcode.app/Contents/Developer
+    • Build 15E204a
+    • CocoaPods version 1.15.2
+
+[✓] Chrome - develop for the web
+    • Chrome at /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+
+[✓] Android Studio (version 2023.2)
+    • Android Studio at /Applications/Android Studio.app/Contents
+    • Flutter plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/9212-flutter
+    • Dart plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/6351-dart
+    • Java version OpenJDK Runtime Environment (build 17.0.9+0-17.0.9b1087.7-11185874)
+
+[✓] VS Code (version 1.88.0)
+    • VS Code at /Users/ahmed/Downloads/Visual Studio Code.app/Contents
+    • Flutter extension can be installed from:
+      🔨 https://marketplace.visualstudio.com/items?itemName=Dart-Code.flutter
+
+[✓] VS Code (version 1.87.2)
+    • VS Code at /Volumes/Mac New/Users/Downloaded Apps/Visual Studio Code.app/Contents
+    • Flutter extension can be installed from:
+      🔨 https://marketplace.visualstudio.com/items?itemName=Dart-Code.flutter
+
+[✓] VS Code (version 1.77.1)
+    • VS Code at /Volumes/Mac New/Users/Downloads/Visual Studio Code.app/Contents
+    • Flutter extension can be installed from:
+      🔨 https://marketplace.visualstudio.com/items?itemName=Dart-Code.flutter
+
+[✓] Connected device (3 available)
+    • RNE L21 (mobile) • FFY5T18403002273 • android-arm64  • Android 8.0.0 (API 26)
+    • macOS (desktop)  • macos            • darwin-x64     • macOS 14.4 23E214 darwin-x64
+    • Chrome (web)     • chrome           • web-javascript • Google Chrome 124.0.6367.119
+    ! Error: Browsing on the local area network for Ahmed’s iPhone. Ensure the device is unlocked and attached with a cable or associated with the same local area network as this Mac.
+      The device must be opted into Developer Mode to connect wirelessly. (code -27)
+
+[✓] Network resources
+    • All expected network resources are available.
+
+• No issues found!
+```
